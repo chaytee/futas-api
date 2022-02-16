@@ -1,0 +1,263 @@
+Relationship
+Relationship.all
+user=User.find(14)
+relationship=user.build_relationship
+relationship.paircode= 'rrrr'
+relationship.valid?
+relationship.erres.full_messages
+relationship.erros.full_messages
+relationship.errors.full_messages
+user=User.find(14)
+relationship=user.build_relationship
+relationship.paircode= 'rrrr'
+relationship.valid?
+relationship.errors.full_messages
+relationship
+User
+relationship.valid?
+reload!
+relationship.valid?
+relationship.errors.full_messages
+user=User.find(14)
+relationship=user.build_relationship
+relationship.paircode= 'rrrr'
+relationship.valid?
+relationship.errors.full_messages
+Relationship.first
+Relationship.first.destroy
+r=Relationship.first
+r.tasks.create
+r.tasks.create(title: 'test')
+Relationship.all
+r=Relationship.first
+Relationship.first.destroy
+Relationship.all
+User.all
+Relationship.all
+Tasks.all
+Relationship.all
+current_user
+User
+User.all
+User.first
+User.last
+User.all
+relationship.errors.full_messages
+r=Relationship.first
+relationship.errors.full_messages
+user=User.find_by(email: 'example@example.com')
+user.relationship.paircode
+user=User.find_by(email: 'example@example.com')
+user.relationship.paircode
+user.relationship_id
+parrner=User.find_by(email: 'example4@example.com')
+current_user
+current_user.relationship
+parrner=User.find_by(email: 'example4@example.com')
+parrner.relationship.paircode
+User.relationship
+User.relationship_id
+user.relationship_id
+user.relationship_id.tasks
+Task.all
+user.relationship_id.tasks
+user.relationship_id
+s=Relationship(8)
+s=Relationship(id: 8)
+Relationship
+Relationship.all
+s=Relationship.find(8)
+s.tasks.create(title: 'test2')
+s.tasks.create(title: 'test3')
+s.tasks
+s.tasks.all
+user.relationship.tasks
+user.relationship
+user.tasks
+s.tasks
+task.all
+Task.all
+user.relationship
+Task.all
+User.all
+user.relationship
+s.tasks.create(title: 'test4')
+s.tasks.all
+User.all
+User.last
+currnt_user
+current_user
+user=User.find_by(email: ‘example@example.com’)
+user=User.find_by(email: 'example@example.com')
+user.relationship.paircode
+partner=User.find_by(email: 'example4@example.com')
+partner.relationship.paircode
+user.relationship.paircode
+partner.relationship.paircode
+current_user
+current_user.tasks
+partner.relationship.paircode
+partner=User.find_by(email: 'example4@example.com')
+partner.relationship.paircode
+user.relationship.paircode
+user.relationship_id
+user
+user=User.find_by(email: 'example@example.com')
+user.relationship_id
+user.relationship
+user=User.find_by(email: 'example@example.com')
+partner=User.find_by(email: 'example4@example.com')
+user.relationship.paircode
+user2=User.find_by(email: 'example2@example.com')
+user2.relationship.paircode
+user=User.find_by(email: 'example@example.com')
+user.relationship.paircode
+partner=User.find_by(email: 'example4@example.com')
+partner.relationship.paircode
+s=Relationship.find(2)
+s.tasks.create(title: ‘test1’)
+s.tasks.create(title: 'test1')
+s.tasks.create(title: 'test2')
+s.tasks.create(title: 'test3')
+partner=User.find_by(email: 'example4@example.com')
+current_user
+Task.last
+Task.last
+current_user.tasks.create(title: 'test3')
+current_user.relationship.tasks
+user.relationship.tasks.create(title: 'test3')
+user.relationship.paircode
+user=User.find_by(email: ‘example@example.com’)
+user=User.find_by(email:'example@example.com')
+user.relationship.paircode
+user.relationship.tasks.create(title: 'test3')
+user.relationship.tasks.find(id: 1).destroy
+user.relationship.tasks.find(id: 4).destroy
+user.relationship.tasks.find(id: 4)
+user.relationship.tasks.find(4)
+user.relationship.tasks.find(4).destroy
+user.relationship.tasks.find(3)
+user.relationship.tasks.find(6)
+user.relationship.tasks.find(6).destroy
+Task.last
+Time.now
+Time.current
+user=User.find_by(email: ‘example@example.com’)
+user=User.find_by(email: 'example@example.com')
+user.relationship.paircode
+partner=User.find_by(email: 'example4@example.com')
+partner.relationship.paircode
+current_user
+user.tasks.all
+user.relationship.tasks.all
+user.relationship.tasks
+current_user.tasks
+user
+user.relationship.tasks.all
+current_user.tasks
+partner.relationship.paircode
+user=User.find_by(email: 'example@example.com')
+user.relationship.tasks.all
+user.relationship.tasks
+s=Relationship.find(1)
+s.tasks.create(title: 'testtesttest22')
+Time.local(2022).zone
+Time.current
+exit
+Time.current
+Time.now
+Task.last
+Time.now
+Task.all
+User.last
+user=User.find_by(email: 'example@example.com')
+user.tasks
+user.tasks.all
+Task.all
+user.tasks
+current_user.tasks
+user.tasks
+user1=User.find_by(email: 'example1@example.com')
+user1.relationship.paircode
+user=User.find_by(email: 'example@example.com')
+user=User.find(1)
+Task.find(1)
+t=Task.find(1)
+Time.now
+Task.all
+User.all
+Tasks.all
+Message.all
+Tasks.all
+Task.all
+Task.new
+Task.count
+Task.all
+user=User.first
+task.where(relationship_id: relationship_id)
+Task.where(relationship_id: relationship_id)
+Task.where(relationship_id: user.relationship_id)
+Task.where(relationship_id: user.relationship_id).includes(:user)
+Task.where(relationship_id: user.relationship_id).joins(:user)
+current_user=User.first
+ars = Task.where(relationship_id: current_user.relationship_id).eager_load(:user)
+@items = ars.as_json(include: {user: {only: [:id, :name, :gender]}})
+current_user=User.first
+Task.joins(relationship: :users).where(relationship_id: current_user.relationship_id).select('tasks.*', 'users.gender', 'users.name', 'users.id')
+relationship_task = Task.where(relationship_id: current_user.relationship_id).where(limit_day: ...Time.current + 1.days).eager_load(:user).order(limit_day: :asc)
+items_json = relationship_task.as_json(include: {user: {only: [:id, :name, :gender]}})
+task=current_user.tasks.count
+taks.as _json
+taks.as_json
+tasks.as_json
+task
+task.to_json
+items_json << task
+items_json
+items_json = relationship_task.as_json(include: {user: {only: [:id, :name, :gender]}})
+items_json
+items_json << task
+current_user.tasks
+current_user.tasks.count
+Task.all
+exit
+Task.all
+User.all
+Task.all
+reload!
+Task.all
+reload!
+Task.all
+exit
+Task.all
+elationship_task = Task.where(relationship_id: current_user.relationship_id)
+Task.where(relationship_id: curwhere("limit_day = self.limit_day + 1.days < Time.current ").eager_load(:user).order(limit_day: :asc).he"limit_day = self.limit_day + 1.days < current ").eager_load(:user).order(limit.where("limit_day = self.limit_day + 1.days < Time.urrent ")eae_la(usr).order(limit_    .where("limit_day = self.limit_day + 1.days < Tme.current ").eager_load(:user).oder
+relationship_task = Task.where(relationship_id: current_user.relationship_id).where("limit_day = self.limit_day + 1.days < Time.current ").eager_load(:user).order(limit_day: :asc)
+q
+relationship_task = Task.where(relationship_id: current_user.relationship_id).where("limit_day = self.limit_day + 1.days < Time.current ").eager_load(:user).order(limit_day: :asc)
+qq
+rrntq
+qq
+current_user=User.first
+relationship_task = Task.where(relationship_id: current_user.relationship_id).where("limit_day = self.limit_day + 1.days < Time.current ").eager_load(:user).order(limit_day: :asc)
+relationship_task = Task.where(relationship_id: current_user.relationship_id).where("limit_day = #{self.limit_day} + #{1.days} < #{Time.current} ").eager_load(:user).order(limit_day: :asc)
+exit
+user=User.first
+user.tasks
+user.tasks.find(1)
+user.find(current_user.relationship.id)
+Messages.all
+current_user=User.first
+current_user.messages
+current_user.relationship_id
+current_user.messages
+Messages.all
+Message.all
+user=User.first
+message=Message.create(content: 'tatatata', user_id: user.id
+  user.message
+Message.all
+message
+message=Message.create(content: 'tatatata', user_id: 1)
+Message.all
+message=Message.create(content: 'ahahahah', user_id: 1, relationship_id: 1)
