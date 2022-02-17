@@ -261,3 +261,5 @@ message
 message=Message.create(content: 'tatatata', user_id: 1)
 Message.all
 message=Message.create(content: 'ahahahah', user_id: 1, relationship_id: 1)
+Rails.application.credentials[:secret_key_base]
+exit
